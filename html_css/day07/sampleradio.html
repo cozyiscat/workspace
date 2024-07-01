@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .zz {display: none;}
+        #a:checked ~ .zz:nth-of-type(2) {display: block;}
+        #b:checked ~ .zz:nth-of-type(3) {display: block;}
+    </style>
+</head>
+<body>
+    <div>
+        <input type="radio" id="a" name="1" checked>
+        <input type="radio" id="b" name="1">
+        <div class="dog">
+            <label for="a">강아지</label>
+            <label for="b">고양이</label>
+        </div>
+        <div class="zz">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </ul>
+        </div>
+        <div class="zz">
+            <ul>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+            </ul>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/box.css">
+</head>
+<body>
+    <!-- <script>
+        //01. 클래스 객체 만들기 ----------
+        class Book{
+            constructor(title,actor,year){
+                this.title = title;
+                this.actor = actor;
+                this.year = year;
+            }
+            show(){
+                document.write(`${this.title}:${this.actor},${this.year}<br>`);
+            }
+            show2(){
+                document.write(`${this.title}(${this.actor}) => ${this.year}<br>`);
+            }
+        }
+        book1 = new Book('노인과 바다','허밍웨이',1950);
+        book1.show();
+        book2 = new Book('삼국지','나관중',900);
+        book2.show();
+        book2.show2();
+    </script> -->
+    <!-- <script>
+        //02. Picture 객체를 클래스로 만들기 -----------
+        class Picture{
+            constructor(aTitle,aImgAddr,aAuthor,aYear){
+                this.title = aTitle;
+                this.imgAddr = aImgAddr;
+                this.author = aAuthor;
+                this.year = aYear;
+            }
+            show(){
+                document.write(
+                    `<dl><dt>${this.title}</dt>
+                        <dd><img src="${this.imgAddr}"></dd>
+                        <dd>${this.author}(${this.year})</dd>
+                        </dl>`
+                );
+            }
+        }
+        new Picture('에펠탑의 신랑신부','./images (1)/pic01.jpg','사갈',1864).show();
+        a.show();
+        a.author
+        new Picture('꿈','./images (1)/pic02.jpg','피카소',1865).show();
+        new Picture('무용실','./images (1)/pic03.jpg','드가',1866).show();
+        new Picture('피아노치는 소녀들','./images (1)/pic04.jpg','르누아르',1867).show();
+    </script> -->
+    <!-- <script>
+        //class 객체 배열만들기 --------------
+        let Books = new Array();
+        class Picture{
+            constructor(aTitle,aImgAddr,aAuthor,aYear){
+                this.title = aTitle;
+                this.imgAddr = aImgAddr;
+                this.author = aAuthor;
+                this.year = aYear;
+            }
+            show(){
+                document.write(
+                    `<dl><dt>${this.title}</dt>
+                        <dd><img src="${this.imgAddr}"></dd>
+                        <dd>${this.author}(${this.year})</dd>
+                        </dl>`
+                );
+            }
+        }
+        Books.push(new Picture('에펠탑의 신랑신부','./images (1)/pic01.jpg','사갈',1864));
+        Books.push(new Picture('꿈','./images (1)/pic02.jpg','피카소',1865));
+        Books.push(new Picture('무용실','./images (1)/pic03.jpg','드가',1866));
+        Books.push(new Picture('피아노치는 소녀들','./images (1)/pic04.jpg','르누아르',1867));
+
+        for (let i = 0; i<4 ; i++){
+            Books[i].show();
+        }
+    </script> -->
+    <script>
+        //03. 객체 표현식
+        let num = {
+            'brand name' : 'MyBrand',
+            level : 2,
+            'born-year' : 2022,
+            'born-1' : 2021,
+            'born-2' : 2022,
+            'born-3' : 2023,
+            'born-4' : 2024,
+            isVeryNice : true,
+            '1stName' : 'javascript',
+            bestCourse : {
+                title : '프론트엔드',
+                laguage : 'javascript',
+                'level num' : 1
+            },
+            name :[1,2,3,4,5]
+        }
+        document.write(num.level,'<br>') 
+        document.write(num['brand name'],'<br>')
+        document.write(num['1stName'],'<br>')
+        document.write(num['born'+'-'+'year'],'<br>')
+        document.write(num.bestCourse.title,'<br>')
+        document.write(num.bestCourse['level num'],'<br>')
+        document.write(num.name[2],'<br>')
+
+        for(i=1; i<=4; i++){
+            document.write(num['born'+'-'+i]);
+        }
+    </script>
+</body>
+</html>

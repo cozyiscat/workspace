@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0 ; padding: 0;}
+        body {font-family: Arial, Helvetica, sans-serif}
+        a {text-decoration: none;}
+        li {list-style: none;}
+    </style>
+    <style>
+        /* #wrap {} */
+        #main_header {
+            background: url(./images/header_background.png);
+            height: 45px;
+            line-height: 45px;
+            position: relative;
+            text-align: center;
+        }
+        #main_header > h1 {
+            color: white;
+        }
+        #main_header > a, #main_header>label {
+            display: block;
+            position: absolute;
+            height: 32px;
+        }
+        #main_header > a.button {
+            background: url(./images/header_left_button.png);
+            width: 62px;
+            left: 5px; top: 7px;
+            text-indent: -99999px;
+        }
+        #main_header > label {
+            background: url(./images/header_right_button.png);
+            width: 32px;
+            right: 5px; top: 7px;
+            text-indent: -99999px;
+        }
+    </style>
+
+    <style>
+        #toggle {display: none;}
+        #wrap> #toggle_gnb_wrap {
+            display: none;
+        }
+        #toggle:checked + #wrap> #toggle_gnb_wrap {display: block;} 
+
+        #toggle_gnb_wrap {
+            background: pink;
+            padding: 15px;
+        }
+        #toggle_gnb_wrap > div {
+            background: orange;
+            padding: 15px;
+        }
+        #toggle_gnb_wrap > div> ul {
+            overflow: hidden;
+        }
+        
+        #toggle_gnb_wrap > div>  ul > li {
+            width: 20%;
+            float: left;
+            text-align: center;
+        }
+</style>
+
+<style>
+    #top {
+        overflow: hidden;
+        background: #777;
+        border-bottom: 1px solid black;
+    }
+    #top > div > a {
+        float: left;
+        width: 25%;
+        text-align: center;
+        height: 35px;
+        line-height: 35px;
+        color: white;
+    }
+
+    #bottom {
+        display: table;
+        width: 100%;
+        background: #999;
+        border-bottom: 1px solid black;
+    }
+    #bottom > div {
+        display: table-cell;
+        position: relative;
+    }
+    #bottom > div >a {
+        display: block;
+        text-align: center;
+        height: 35px;
+        line-height: 35px;
+        color: bisque;
+    }
+    #bottom> div >a::before{
+        display: block;
+        border-left: 1px solid black;
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 15px;
+        left: -1px; top: 10px;
+    }
+</style>
+<style>
+    /* #main_section {} */
+    #section_header {
+        margin: 20px;
+        padding: 10px;
+    }
+    #main_article {
+        margin: 20px;
+    }
+    #main_article>p {
+        padding: 20px;
+        border: 1px dashed gray;
+        border-radius: 10px;
+    }
+
+    #main_footer { padding: 10px;
+    border-top: 1px dashed gray;
+    text-align: center;}
+
+    fieldset {
+        margin: 20px;
+        padding: 10px;
+        border: 1px dashed gray;
+        border-radius: 10px;
+    }
+    fieldset > p {
+        padding: 10px;
+        padding-top: 0;
+    }
+</style>
+</head>
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <h1>MAIN</h1>
+            <a href="#" class="button">button</a>
+            <label for="toggle">toggle</label>
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div>
+                <ul>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="top">
+            <div><a href="#">1</a></div>
+            <div><a href="#">2</a></div>
+            <div><a href="#">3</a></div>
+            <div><a href="#">4</a></div>
+        </nav>
+        <nav id="bottom">
+            <div><a href="#">5</a></div>
+            <div><a href="#">6</a></div>
+            <div><a href="#">7</a></div>
+            <div><a href="#">8</a></div>
+            <div><a href="#">9</a></div>
+        </nav>
+
+        <section id="main_section">
+            <header id="section_header">
+                <h1>연세 IT 학원</h1>
+                <time datetime="">2024-06-19</time>
+            </header>
+            <article id="main_article">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur veritatis iste eius, distinctio ipsam dicta debitis iusto ipsa est ad quasi, quas tempore. Perspiciatis laborum at quibusdam aliquam cumque.
+                </p> <br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur veritatis iste eius, distinctio ipsam dicta debitis iusto ipsa est ad quasi, quas tempore. Perspiciatis laborum at quibusdam aliquam cumque.
+                </p> <br>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur veritatis iste eius, distinctio ipsam dicta debitis iusto ipsa est ad quasi, quas tempore. Perspiciatis laborum at quibusdam aliquam cumque.
+                </p> <br>
+            </article>
+            <fieldset>
+                <legend style="margin-left: 10px; text-align: center; font-size: 20px;" ><b>메뉴</b></legend>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. In consequatur veritatis iste eius, distinctio ipsam dicta debitis iusto ipsa est ad quasi, quas tempore. Perspiciatis laborum at quibusdam aliquam cumque.
+                </p>
+            </fieldset>
+        </section>
+        <footer id="main_footer">
+            <h3> 연세 it 학원</h3>
+            <address>수원 영화동 장안구</address>
+        </footer>
+
+    </div>
+    
+</body>
+</html>

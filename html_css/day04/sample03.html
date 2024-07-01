@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* a:link{color: red; text-decoration: none;}
+        a:visited{color: blue;}
+        a:hover {text-decoration: underline; color: green;}
+        a:focus {text-decoration: overline; outline: 0; color: yellow;}
+        a:active {background: #c00 ; text-decoration: none;}
+  
+        #box::after{ content: "안녕히가세요!!"; color: #0c0;}
+        #box::before{ content: "안녕하세요!!"; color: #00c;} */
+
+        a[href^="https"] {background-color: skyblue;}
+        a[href$="com"] {text-decoration: line-through;}
+        a[target=_self] {color: red;}
+    </style>
+
+</head>
+
+<body>
+    <div id="box">
+      <p><a href="http://www.naver.com" target="_blank">네이버</a></p>
+      <p><a href="https://www.daum.net" target="_blank">다음</a></p>
+      <p><a href="http://www.google.com" target="_self">구글</a></p>
+      <p><a href="http://www.hrd.go.kr">HRD</a></p>
+      <p><a href="https://www.kt.co.kr">KT</a></p>
+    </div>
+    
+</body>
+</html>

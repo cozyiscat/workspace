@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {margin: 0 auto; padding: 0;}
+        body {font-family: Arial, Helvetica, sans-serif;
+             /* background: #888; */
+            }
+        li {list-style: none;}
+        a {text-decoration: none;}
+        img {width: 300px;}
+
+    </style>
+
+    <style>
+        .container {
+            margin: 10px auto;
+            width: 1000px;
+
+            overflow: hidden;
+            /* display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 200px; */
+        }
+        .header {
+            overflow: hidden;
+            float: left;
+        }
+        .headertop {
+            margin-bottom: 30px;
+            padding: 10px;
+            position: relative;
+            width: 345px;
+            height: 150px;
+            background-color: white;
+            float: left;
+            
+            /* grid-row: 1/3; */
+        }
+        .headertop h1 {
+            color: green;
+            font-size: 25px;
+        }
+        .headertop div {
+            margin: 0;
+            width: 130px;
+            border: 1px solid green;
+        }
+        .headertop p {
+            font-size: 13px;
+            position: absolute;
+            color: gray;
+            top: 20px;
+            right: 10px;
+        }
+        .headertop p>a  {  color: gray;  }
+        hr {border : 1px solid darkgray;}
+
+        .header-table {
+            background-color: white;
+            border-collapse: collapse;
+            margin-top: 10px;
+            
+        }
+
+        .header-table tr {
+            margin-top: 10px;
+            
+        }
+
+        td { 
+            font-size: 12px;
+            border-bottom: 1px solid gray;
+            padding: 5px;
+
+        }
+        
+        td > a {
+            color: gray;
+            width: 240px;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        td:nth-of-type(2) {
+            font-weight: bold;
+        }
+
+
+    </style>
+    <style>
+        .header-2 {
+            margin: 0 20px;
+            float: left;
+            width: 210px;
+            height: 150px;
+            padding: 10px;
+            background-color: white;
+            line-height: 30px;
+        }
+        .header-2 h1 {font-size: 25px;}
+        .header-2 h2 {font-size: 20px;}
+        .header-2 h3 {font-size: 15px;}
+        .header-2 p {font-size: 11px; color: gray;}
+
+
+    </style>
+    <style>
+        .main1 {
+            margin: 10px auto;
+            /* background-color: white; */
+            /* width: 989px; */
+            
+        }
+        .headertop1 {
+            padding: 10px;
+            position: relative;
+            width: 980px;
+            background-color: white;
+            overflow: hidden;
+        }
+        .headertop1 h1 {
+            color: green;
+            font-size: 25px;
+        }
+        .headertop1 div {
+            margin: 0;
+            width: 130px;
+            border: 1px solid green;
+        }
+        .headertop1 p {
+            font-size: 13px;
+            position: absolute;
+            color: gray;
+            top: 20px;
+            right: 20px;
+        }
+        .headertop1 p>a  {  color: gray;  }
+    </style>
+    <style>
+        .img1 {
+            background-color: white;
+            position: relative;
+        overflow: hidden;
+    }
+        .img1> div {
+            margin: 10px 15px;
+            float: left;
+            width: 300px;
+        }
+        .img1> div> p {
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: gray;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="header">
+            <div class="headertop">
+                <h1>공지사항</h1>
+                <p><a href="#">더보기+</a></p>
+                <div></div>
+                <hr>
+                <table class="header-table" style="width: 330px;">
+                    <tr>
+                        <td><a href="http://naver.com" id="">웹표준으로 제작되어 스마트폰에서도 가능합니다 어쩌구저쩌구</a></td>
+                        <td>2024-06-21</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="">타업종에서도 이용이 가능하며, 그 경우 어쩌구 저쩌구</a></td>
+                        <td>2024-06-21</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="">펜션, 게스트하우스, 민박등의 업종에 적합합니당</a></td>
+                        <td>2024-06-21</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="nav">
+            <div class="header-2">
+                <h2>고객센터</h2>
+                <p>전화상담 가능시간 : 오전 09시 ~ 오후 06시</p>
+                <h1>070-000-0000</h1>
+                <h3>농협 000-0000-00000-00 000</h3>
+            </div>
+        </div>
+
+        <div class="nav2">
+            <div class="headertop">
+                <h1>고객문의</h1>
+                <p><a href="#">더보기+</a></p>
+                <div></div>
+                <hr>
+                <table class="header-table" style="width: 330px;">
+                    <tr>
+                        <td><a href="http://naver.com" id="">겨울에도 바베큐시설이 이용 가능한가요?</a></td>
+                        <td>2024-06-21</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="">픽업서비스가 가능한가요?</a></td>
+                        <td>2024-06-21</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" id="">펜션근처에 먹을거리를 살곳이 있나요?</a></td>
+                        <td>2024-06-21</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="main1">
+            <div class="headertop1">
+                <h1>고객문의</h1>
+                <p><a href="#">더보기+</a></p>
+                <div></div>
+                <hr>
+            </div>
+            <div class="img1">
+                <div>
+                    <img src="../cozy/A5EEBF68-DA5D-40D7-85F5-D923218C8877 (1).jpg" alt="" style="height: 350px;">
+                    <p>샘플사진</p>
+                </div>
+                <div>
+                    <img src="../cozy/IMG_1776 (1).jpg" alt="" style="height: 350px;">
+                    <p>샘플사진</p>
+                </div>
+                <div>
+                    <img src="../cozy/IMG_1879.jpg" alt="" style="height: 350px;">
+                    <p>샘플사진</p>
+                </div>
+                <div>
+                    <img src="../cozy/IMG_2123.jpg" alt="" style="height: 350px;">
+                    <p>샘플사진</p>
+                </div>
+                <div>
+                    <img src="../cozy/IMG_2277.jpg" alt="" style="height: 350px;">
+                    <p>샘플사진</p>
+                </div>
+                <div>
+                    <img src="../cozy/IMG_8561.jpg" alt="" style="height: 350px;">
+                    <p>샘플사진</p>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>이미지생성하기</title>
+</head>
+<body>
+<div>
+    <!-- <img src="./images/color_1.png" alt="">
+    <img src="./images/color_2.png" alt="">
+    <img src="./images/color_3.png" alt="">
+    <img src="./images/color_4.png" alt="">
+    <img src="./images/color_5.png" alt="">
+    <img src="./images/color_6.png" alt=""> -->
+</div>
+<script>
+    const divDom = document.querySelector("div"); //css요소 선택!!
+    for(i=1 ; i<=6; i++){
+        let imgEle = document.createElement("img"); //생성!
+        // imgEle.setAttribute("src", "./images/color_" + i + ".png"); //템플릿리터럴사용x
+        imgEle.setAttribute("src",`./images/color_${i}.png`); //변경! //템플릿 리터럴 ``
+        divDom.append(imgEle); //추가 (divDom 요소에 imgEle를 추가)
+    }
+</script>
+</body>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'd2coding';
+            /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        }
+    </style>
+    <script>
+        function log(...texts) {
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        // var num =1;
+        // //함수 선언
+        // function love(){
+        //      a= '설악산';
+        //     var b = '지리산';
+        //     // str = '산'; //전역변수
+        //     // var sum = '강'; //지역변수
+        //     document.write('함수 내에서 출력' , a,'<br>');
+        //     document.write('함수 내에서 출력', b,'<br>');
+        //     return a;
+        // }
+        // love();
+        // document.write(a,'<br>');
+
+        //기명함수
+        // function all(a,b){
+        //     let result;
+        //     result = a>b? console.log('a>b') : console.log('a<b');
+        //     return result;
+        // }
+        // var all = function(a,b){
+        //     let result;
+        //     result = a>b? console.log('a>b') : console.log('a<b');
+        //     return result;
+        // }
+
+        // let first = 13;
+        // let last = 7;
+
+        // all (first, last);
+        // all (34,45);
+        // all (1/2, 3/4);
+
+        //-------------즉시함수
+        // let first = 13;
+        // let last = 7;
+        // var all = function(a,b){
+        //     let result;
+        //     a>b? document.write('a>b') : document.write('a<b');
+        //     result = a>b? 'a>b' : 'a<b';
+        //     return result;
+        // }(first,last);
+
+        // console.log (all);
+
+        //-------------람다식
+        // function maxFunc(a,b){
+        //     let result = a>b? a:b ;
+        //     return;
+        // }
+
+        // const max = (a,b)=> a>b?a:b;
+        // document.write(max(15,6));
+
+        //매개변수가 없을 때
+        let main1 = () => {
+            console.log('안녕')
+        }
+        main1();
+
+        // 매개변수가 1개
+        let main2 = a => {
+            console.log(a)
+        }
+        main2('오잉');
+        
+        // 매개변수가 여러개
+        let main3 = (a,b) => {
+            console.log(a+b)
+        }
+        main3(7,3);
+
+        //람다식 단축형 1 
+        //실행문이 한줄 = 중괄호{} 생략 가능
+        let test1 = (a,b) => console.log(a+b)
+        test1(3,4);
+
+        //단축형2 return문이면서 한줄인 경우 = return, {} 생략 가능
+        // let test2 = a => a * 2
+        let test2 = a => {return a*2};
+        console.log(test2(5));
+
+        //3. 실행문 1줄/ 객체 return = return은 생략하지만 리턴객체 괄호()로 감싸야함
+        // let test3 = a => {return{b:a}}
+        let test3 = a => ({b:a})
+        console.log(test3(25))
+
+
+    </script>
+</body>
+</html>

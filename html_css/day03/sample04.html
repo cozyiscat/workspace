@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* div {background-color: burlywood;} */
+        table {border-collapse: collapse; margin: 50px auto; 
+            width: 600px;}
+        th, td {border: 1px dashed #ccc ; padding: 15px 30px ;} 
+
+        tr:nth-child(1) {text-align: center; background-color: palevioletred;}
+        td:nth-child(2) {text-align: right; background-color: yellow;}
+        #aaa { color: orangered; border: 5px dotted #aaa; background-color: aquamarine;}
+        .bbb {border: 3px double #fcc; border-left: solid; border-right: solid;}
+    </style>
+    
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+            <tr><th>2</th>
+            <th>4</th></tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="2" style="background-color: orange;">웹</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+            <td rowspan="4">Frontend(Web Publisher)</td>
+            <td>웹표준</td>
+        </tr>
+            <tr>
+            <td>코딩</td>
+        </tr>
+            <tr>
+            <td>사바스크립트</td>
+        </tr>
+            <tr>
+            <td>반응형</td>
+        </tr>
+    </tbody>
+    </table>
+    <table>
+        <caption> frontend 웹퍼블리싱</caption>
+        <colgroup>
+            <!-- <col style="width: 40%;">  -->
+            <!-- <col style="width: 60%;">        -->
+        </colgroup>
+        <tr>
+        <th>번호</th>
+        <th>교육과정</th>
+        <th>교육내용</th>
+        </tr>
+        <tr>
+            <td id="aaa">1</td>
+            <td class="bbb">웹퍼블리셔</td>
+            <td>전문적인 포트폴리오 완성</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>모바일앱</td>
+            <td>UX/UI를 고려하고 매체에 특성 반영</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>스마트 플랫폼기반 웹&앱</td>
+            <td>디지털 시대에 최적하된 커리큘럼</td>
+        <tr>
+            <td colspan="3" style="text-align: center;">웹표준 웹접근성 웹사이트제작</td>
+            </tr>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>

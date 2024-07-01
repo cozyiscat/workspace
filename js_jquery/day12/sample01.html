@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // // 변수 선언하기
+        // var num10 = 10;
+        // var num20 = 20;
+        // var num03 = 3;
+
+        // // 결과값 출력하기
+        // log(num10 + num20);
+        // log(num10 - num20);
+        // log(num10 * num20);
+        // log(num20 / num03);
+        // log(num10 % num03);
+
+        //대입 연산자-----------------------
+        // let sum01 = 10;
+        // log(sum01);
+        // sum01+= 5;
+        // log(sum01);
+        // sum01-=5;
+        // log(sum01);
+        // sum01*=5;
+        // log(sum01);
+        // sum01/=5;
+        // log(sum01);
+        // sum01%=5;
+        // log(sum01);
+
+        //증감연산자------------------------
+        // let a = 10;
+        // let b,y;
+        // let x = 10;
+        
+        // b = a++;
+        // log(a, b);
+        
+        // y= ++x;
+        // log(x,y);
+
+        //결합연산자--------------------
+        // log(3+4);
+        // log("고양"+"이");
+        // log("고양이"+2+"마리");
+        // log(2+"마리");
+        // log(2+3+"마리");
+        // log("고양이"+2+3+"마리");
+
+        // let num1=2;
+        // let num2=3;
+        // log(`고양이 ${num1+num2}마리`);
+
+        //비교연산자------------------
+        // let a = 20;
+        // let b = 10;
+        // let c = '10';
+        // let d = 3;
+        // let e = 2;
+
+        // log(a>b);
+        // log(b>c);
+        // log(b>=c);
+        // log(b==c);
+        // log(b===c);
+        // log(b!=c);
+        // log(b!==c);
+
+        // log(++e);
+        // log(d===++e);
+        // log(d!==e++);
+
+        //논리연산자-------------------
+        // let id= 'main';
+        // let pwd= '1234';
+
+        // let userId= 'main';
+        // let userPwd= '1234';
+
+        // let result = (id === userId) && (pwd === userPwd);
+        // log (result);
+
+        // log (id==='main' && pwd ==='5678');
+        // log (id==='main' || pwd ==='5678'); 
+        // log (!(id==='main' || pwd ==='5678')); //반전
+
+        //저장된 id, 패스워드 값 선언하기
+        // var ID = '바보';
+        // var PW = '메롱바보';
+        // //사용자 id, 패스워드 값 선언하기
+        // var userId = prompt('아이디를 입력하세요'); //사용자 id 값 입력
+        // var userPw = prompt('패스워드를 입력하세요'); //사용자 pw 값 입력
+        // //결과를 알아보기 위한 and 논리식 만들기
+        // var result = (ID === userId) && (PW === userPw);
+        // //결과 출력
+        // console.log('로그인 결과는 :',result);
+
+        // let classA = prompt('소프트웨어 설계 점수?');
+        // let classB = prompt('소프트웨어 개발 점수?');
+        // let classC = prompt('프로그램 언어 활용 점수?');
+        // let classD = prompt('정보 시스템구축관리 점수?');
+
+        // //평균 60 과락 40
+        // let resultA = (Number(classA) >=40);
+        // let resultB = (Number(classB) >=40);
+        // let resultC = (Number(classC) >=40);
+        // let resultD = (Number(classD) >=40);70
+
+        // let total = ((Number(classA))+(Number(classB))+(Number(classC))+(Number(classD)));
+        // let avg = (total/4) >= 60;
+
+        // log("합격", resultA && resultB && resultC && resultD && avg)
+
+        //문제) 대출받는데 나이가 20세 이상 가능
+        // 자산이 100원이상은 50원까지 대출가능
+        // 200원 이상은 100원까지 대출가능
+
+       // prompt로 나이,자산,희망대출금액 입력받아서 대출승인여부 판단코드 만들기
+
+       let class1 = prompt('나이?');
+       let class2 = prompt('자산?');
+       let class3 = prompt('희망대출금액?');
+
+       let age = (Number(class1) >=20);
+       let asset1 = (Number(class2) >=100);
+       let get1 = (Number(class3) <=50);
+       
+       let asset2 = (Number(class2) >=200);
+       let get2 = (Number(class3) <=100);
+
+       let total1 = (asset1 && get1);
+       let total2 = (asset2 && get2);
+
+
+    // log("대출 승인", (result1 && result2 && result3)||(result1 && result4 && result5))  
+       let loan = age && (total1||total2)
+        log("대출 승인", loan );
+    
+        // // 대출 -
+        // // 나이 20이상, 자산 100원이상은 50원까지 가능, 200원이상은 100원까지 가능
+        // // prompt로 나이, 자산, 희망대출금액 입력받아서 대출 승인여부 판단 코드
+        // let age = prompt('나이');
+        // let haveMoney = prompt('자산');
+        // let wantMoney = prompt('희망대출금액');
+        // let result1 = age>=20 && haveMoney>=100; //대출 기본 조건
+        // let result2 = haveMoney<200 && wantMoney<=50; //대출 조건 100원이상
+        // let result3 = haveMoney>=200 && wantMoney<=100; //대출 조건 200원이상
+        // log('대출승인여부: ',result1 && (result2 || result3));
+
+        let result = (loan)? "가능":"불가능";
+        log("대출", result);
+
+        (loan)? log("대출가능"): log("대출불가능")
+
+            //변수 선언하기
+    var i = 30;
+    var j = 15;
+
+    //조건 연산자
+    var c =(i<j)? 'i가 j보다 작다' : 'i가 j보다 크다'; //30 < 15 --> false값 나옴
+
+    // 출력하기
+    log(c);
+    </script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'd2coding';
+            /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        }
+    </style>
+    <script>
+        function log(...texts) {
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        // function addNum(num1, num2){
+        //     let sum = num1 + num2;
+        //     return sum; //값을 전달받아서 본문으로 전달
+        // }
+        // let sum1 = addNum(1,2);
+        // document.write(sum1,"<br>");
+        // document.write(addNum(3,4),"<br>");
+
+
+        // function writeSum(num1, num2){
+        //     document.write(num1+num2);
+        // }
+        // writeSum(3,4);
+
+
+        // for(let dan = 2; dan <10; dan++){
+        //     for(let n = 2; n <10; n++){
+        //         document.write(dan,"*",n,"=",dan*n,"<br>");
+        //     }
+        // }
+
+
+        function displayDan(dan){
+            for(let n=2;n<10;n++){
+                document.write(dan,"*",n,"=",dan*n,"<br>");
+            }
+        }
+        for(let dan=2; dan<10; dan++){
+            displayDan(dan);
+        } 
+
+
+        // ----------함수 사용해보기 (별 만듥)
+
+        function writeBlank(count){
+            for(let i = 0; i<count; i++){
+                document.write("&nbsp;");
+            }
+        }
+        function writeStar(count){
+            for(let i = 0; i<count; i++){
+                document.write("*");
+            }
+        }
+         //함수
+        //blank 늘어나는 공백 //star 늘어나는 별
+        
+        document.write("<br>");
+        for(let n=5, s=1; n>=0 & s<6; n--,s++){
+            writeBlank (s); writeStar (n);
+            writeBlank (n); writeStar (s);
+            document.write("<br>");
+        }
+        for(let n=5, s=1; n>=0 & s<6; n--,s++){
+             writeStar (n); writeBlank (s);
+             writeStar (s); writeBlank (n);
+            document.write("<br>");
+        }
+        //간단하게 만들기
+
+        writeBlank (4); writeStar (1); document.write("<br>");
+        writeBlank (3); writeStar (2); document.write("<br>");
+        writeBlank (2); writeStar (3); document.write("<br>");
+        writeBlank (1); writeStar (4); document.write("<br>");
+        writeBlank (0); writeStar (5); document.write("<br>");
+        //풀어서 만들기
+
+    function line(str, n){
+        for(i=1; i<=n;i++){
+            document.write(str);
+        }
+        document.write("<br>");
+    }
+    line("*",7);
+    line("@",1);
+    line("#",10);
+
+    function add(num1,num2){
+        let sum = num1+num2;
+        document.write(sum+'<br>');
+    }
+    add(2,3);
+    add(45,3463);
+    add(123456,876543);
+
+    //함수로 버튼 만들기
+    function gift(sport){
+        switch(sport){
+            case "축구": alert("박지성 사인볼에 당첨되셨습니다."); break;
+            case "야구": alert("류현진 사인볼에 당첨되셨습니다."); break;
+            case "농구": alert("마이클조던 사인티셔츠에 당첨되셨습니다."); break;
+            default : alert("꽝");
+        }
+    }
+
+    function flower(flowerName){
+        switch(flowerName){
+            case '무궁화':alert('무궁화 동호회를 추천합니다.'); break;
+            case '장미':alert('장미 동호회를 추천합니다.'); break;
+            case '국화':alert('국화 동호회를 추천합니다.'); break;
+        }
+    }
+
+    var first = 13;
+    var last = 7;
+    var result = all(first,last);
+        document.write(result);
+    
+    function all(a,b){
+        var sam = a+b;
+        return sam;
+    }
+</script>
+
+<button type="button" onclick="gift('축구')">축구</button>
+<button type="button" onclick="gift('야구')">야구</button>
+<button type="button" onclick="gift('농구')">농구</button>
+<br><br>
+<button type="button" onclick="flower('무궁화')">무궁화</button>
+<button type="button" onclick="flower('장미')">장미</button>
+<button type="button" onclick="flower('국화')">국화</button>
+</body>
+</html>

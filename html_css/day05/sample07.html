@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0;}
+        body {font-size: 15px; color: #555; line-height: 160%; background: #f9f9f5;}
+        #wrap {width: 1000px; margin-left: auto; margin-right: auto;}
+        #wrap h2 {font-size: 20px; color: #222; font-weight: normal; text-align: center;
+        margin-top: 50px; margin-bottom: 50px;}
+        
+        #wrap #textBox {background: #fff;}
+        #wrap #textBox #section1 {padding: 30px;}
+        #wrap #textBox #section2 {padding: 30px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h2>텍스트 전체 랩핑 wrap너비 1000px 가운데 정렬 margin-left:auto;
+            margin-right:auto; <br>
+            줄간격 160%; 섹션 1,2 모두 안여백 padding:30px;
+        </h2>
+        <div id="textBox">
+            <section id="section1"> 
+                <h3>섹션1 타이틀</h3>
+                <p class="text-indent1">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente deleniti, saepe, libero rerum quibusdam, tenetur molestias exercitationem possimus explicabo officiis incidunt doloribus reprehenderit quis sit. Sequi, temporibus. Officia, consequatur accusantium?
+                </p>
+            </section>
+            <section id="section2"> <h3>
+                섹션2 타이틀
+            </h3>
+                <p class="text-indent2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente deleniti, saepe, libero rerum quibusdam, tenetur molestias exercitationem possimus explicabo officiis incidunt doloribus reprehenderit quis sit. Sequi, temporibus. Officia, consequatur accusantium?
+                </p>
+            </section>
+        </div>
+    </div>
+    
+</body>
+</html>

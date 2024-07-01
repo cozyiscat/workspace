@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            font-family: 'd2coding';
+            white-space: pre; /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        }
+    </style>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+    <script>
+        // for(let i =1; i<3; i++){
+        //     log(i);
+        // }
+        // log("종료");
+
+        //88p 예제
+        // let sum = 0;
+        // for(let i = 1; i<=10; i++){
+        //     sum+=i
+        // }
+        // log(sum);
+
+        //은행 복리 계산하기 (원금 100만원 이자 1%)
+        // let money = 100;
+        // for(let m = 1; m <= 12; m++){
+        //     log(money);
+        //     money *= 1.01; //(1(원금)+0.01(이자))=1.01
+        // }
+        // log(money);
+
+        //구구단 만들기
+        // for(let i=2; i<=9; i++){
+        //     log("2 *",i,"=",2*i);
+        // }
+        // for(let dan=1; dan<=9; dan++){ //앞에 숫자  1~9 
+        //     for(let n =2; n<=9; n++){  //뒤에 숫자 2~9 
+        //         log(dan , "*",n,"=",dan*n);  //dan(앞) * n(뒤) = dan*n 곱한 수
+        //     }
+        // }
+        //큰 for문에서 작은 for문으로 내려와서 돌다가 조건 맞으면 빠져나감
+        //>다시 큰 for문 반복
+
+        //하나씩 늘어나는 별 만들기
+        // for(let line = 0; line <10; line++){
+        //     let strStar = ""; //빈문자
+        //     for( let star = 0; star <= line; star++){ 
+        //         strStar += "*"; // *더하기
+        //     }
+        //     log(strStar);
+        // }
+
+        for(let line = 1; line <= 11; line++){
+            let strStar = ""; //빈문자
+            for( let star = 1; star < line; star++){ 
+                strStar += "  "; // *더하기
+            }
+            for( let star = 11 ; star > line; star--){ 
+                strStar += " *"; // -빼기
+            }
+            for( let star = 11 ; star > line; star--){ 
+                strStar += "  "; // -빼기
+            }
+            for( let star = 1; star < line; star++){ 
+                strStar += " *"; // *더하기
+            }
+            log(strStar);
+        }
+        for(let line = 1; line <= 11; line++){ //총 11줄
+            let strStar = ""; //빈문자
+            for( let star = 11 ; star > line; star--){ 
+                strStar += " *"; // -빼기
+            }
+            for( let star = 1; star < line; star++){ 
+                strStar += "  "; // *더하기
+            }
+            for( let star = 1; star < line; star++){ 
+                strStar += " *"; // *더하기
+            }
+            for( let star = 11 ; star > line; star--){ 
+                strStar += "  "; // -빼기
+            }
+            log(strStar);
+        }
+
+                for(let line = 0; line <=10; line++){ 
+            let strStar = ""; //반복 0~10 까지
+            for( let star = 10; star >= line; star--){
+                //star 10 시작 star가 line보다 크거나 같을 때 -1
+                //10 ~ 0까지 될때까지(10부터 시작하니까 11번) * 추가 (시작 11개)
+                //(stra가 line보다 클때로 계산하면 반복 1회 빠짐(시작10))
+                //for문 빠져나가서 line +1씩 상승 > 9~0 8~0 처럼 줄어듦
+
+                strStar += "*"; // "*"을 반복할때마다 더한다
+            }
+            log(strStar);
+        }
+
+        let num =1 ;
+        let sum = 0;
+        while(num <= 10){
+            sum += num;
+            num++;
+        }
+        log(sum);
+
+        let money = 100;
+        let m = 1;
+        while(m <= 12){
+            money +=m;
+            m++;
+
+        }
+        log(money);
+
+            // 은행 복리 계산하기 (원금 100만원 이자 1%)
+        // let money = 100;
+        // for(let m = 1; m <= 12; m++){
+        //     log(money);
+        //     money *= 1.01; //(1(원금)+0.01(이자))=1.01
+        // }
+        // log(money);
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {margin: 0;}
+    li {list-style: none;}
+    /* a {text-decoration: none;  */
+    /* color: black;} */
+    .list1 li:hover {background-color: #000; color: white;}
+    /* a:visited {background-color: crimson; color: white;} */
+    #scr {
+        margin: 0 auto;
+        margin-top: 10px;
+        /* padding: 10px; */
+        text-align: center;
+        line-height: 100px;
+        width: 500px;
+        height: 100px;
+        border: 1px solid black;
+        background: #000;
+        color: #fff;
+        font-size: 40px;
+    }
+
+    body {
+        width: 560px;
+        margin: 0 auto;
+    }
+    .list1 { 
+        overflow: hidden;
+        margin: 20px auto;
+    }
+    .list1 li{
+        float: left;
+        margin: 5px;
+        /* display: block; */
+        line-height: 3;
+        /* float: left; */
+        border: #000 solid 1px;
+        width: 60px; height: 50px;
+        text-align: center;
+        border-radius: 25px 25px 0 0;
+        /* margin: 5px; */
+
+    }
+
+    /* ul:nth-child(1) li {margin-bottom: 30px;} */
+    .lili1 > li:nth-child(2) {margin-right: 30px;}
+    ul:nth-child(1) > li:nth-child(4) {margin-right: 30px;}
+    
+    ul:nth-child(2) li {margin-bottom: 30px;}
+    ul:nth-child(2) > li:nth-child(2) {margin-right: 30px;}
+    ul:nth-child(2) > li:nth-child(4) {margin-right: 30px;}
+
+    /* ul:nth-child(3) li {margin-bottom: 30px;} */
+    ul:nth-child(3) > li:nth-child(2) {margin-right: 30px;}
+    ul:nth-child(3) > li:nth-child(4) {margin-right: 30px;}
+    
+    ul:nth-child(4) li {margin-bottom: 30px;}
+    ul:nth-child(4) > li:nth-child(2) {margin-right: 30px;}
+    ul:nth-child(4) > li:nth-child(4) {margin-right: 30px;}
+    
+    /* ul:nth-child(5) li {margin-bottom: 30px;} */
+    ul:nth-child(5) > li:nth-child(2) {margin-right: 30px;}
+    ul:nth-child(5) > li:nth-child(4) {margin-right: 30px;}
+    
+    ul:nth-child(6) li {margin-bottom: 30px;}
+    ul:nth-child(6) > li:nth-child(2) {margin-right: 30px;}
+    ul:nth-child(6) > li:nth-child(4) {margin-right: 30px;}
+
+
+</style>
+<body>
+    <div>
+        <div id="scr">Screen</div>
+    </div>
+
+    <div class="list1">
+        <ul class= lili1>
+            <li>A1</li>
+            <li>A2</li>
+            <li>A3</li>
+            <li>A4</li>
+            <li>A5</li>
+            <li>A6</li>
+        </ul>
+        <ul class= lili2>
+            <li>B1</li>
+            <li>B2</li>
+            <li>B3</li>
+            <li>B4</li>
+            <li>B5</li>
+            <li>B6</li>
+        </ul>
+        <ul class= lili3>
+            <li>C1</li>
+            <li>C2</li>
+            <li>C3</li>
+            <li>C4</li>
+            <li>C5</li>
+            <li>C6</li>
+        </ul>
+        <ul class= lili4>
+            <li>D1</li>
+            <li>D2</li>
+            <li>D3</li>
+            <li>D4</li>
+            <li>D5</li>
+            <li>D6</li>
+        </ul>
+        <ul class= lili5>
+            <li>E1</li>
+            <li>E2</li>
+            <li>E3</li>
+            <li>E4</li>
+            <li>E5</li>
+            <li>E6</li>
+        </ul>
+        <ul class= lili6>
+            <li>F1</li>
+            <li>F2</li>
+            <li>F3</li>
+            <li>F4</li>
+            <li>F5</li>
+            <li>F6</li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

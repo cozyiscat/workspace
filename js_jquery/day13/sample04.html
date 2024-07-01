@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-family: 'd2coding';
+            white-space: pre;
+            /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        }
+    </style>
+    <script>
+        function log(...texts) {
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="log"></div>
+    <script>
+
+        for(let i = 1; i<100; i++) {
+            let num = i * 10;
+            let count = 0;
+            while (true) {
+                num = parseInt(num / 10);
+                if ((num % 10) % 3 == 0) {
+                    count++;
+                }
+                if (num < 10) {
+                    break;
+                }
+            }
+            log(i,"번째, 박수:",count);
+         }
+
+    
+    
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {font-family: Arial, Helvetica, sans-serif;
+        /* background: #999; */
+    }
+        li {list-style: none;}
+        a {text-decoration: none;
+        color: black;}
+        img {border: 0;}
+    </style>
+
+    <style>
+        section {
+            margin: 0 auto;
+            padding: 10px;
+            width: 1000px;
+            overflow: hidden;
+            /* background-color: white; */
+        }
+
+        #main_div {
+            margin-left: 40px;
+            background-color: white;
+            padding: 20px;
+            width: 75%;
+            float: left;
+        }
+        
+        #main_div > h1 {
+            margin-bottom: 10px;
+        }
+        #main_div > p:nth-of-type(1) {
+            display: block;
+            border: 1px solid gray;
+            width: 45px;
+            /* height: 1px; */
+        }
+        #main_div > p:nth-of-type(2) {
+            font-size: 14px;
+            color: gray;
+            padding-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+        thead {
+            background-color: #eee;
+        }
+        tbody {
+            border-bottom: 1px solid #bbb;
+        }
+        td,th {
+            font-size: 13px;
+            border-top: 1px solid #bbb;
+            padding: 8px;
+        }
+        th {font-weight: bold;}
+        tr > td:nth-of-type(2) {
+            text-align: left;
+        }
+        #table_div {
+            padding: 2px 0;
+            border-bottom: 2px solid green;
+            border-top: 2px solid green;
+        }
+    </style>
+
+    <style>
+        #left_nav {
+            background-color: white;
+            width: 15%;
+            padding: 10px;
+            float: left;
+        }
+        /* #nav_1 {        } */
+        #nav_1 > h2 {
+            display: block;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 10px 5px;
+            font-size: 20px;
+        }
+        #nav_1 > ul {
+            margin: 10px 0;
+            font-size: 13px;
+            padding: 5px;
+            line-height: 20px;
+            color: black;
+        }
+        #nav_1 > ul >li {
+            padding: 5px 0;
+            border-bottom: 1px solid gray;
+        }
+
+        #nav_1 >div> h4 {
+            margin-top: 30px;
+            padding-bottom: 5px;
+            display: block;
+            border-bottom: 1px solid gray;
+            font-size: 15px;
+        }
+        #nav_1 >div> h3 {
+            margin-top: 10px;
+            color: gray;
+        }
+        #nav_1 >div> p {
+            font-size: 13px;
+            color: gray;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <section>
+        <div id="left_nav">
+            <div id="nav_1">
+                <h2>커뮤니티</h2>
+                <!-- <p>></p> -->
+                <ul>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">고객문의</a></li>
+                    <li><a href="#">이용후기</a></li>
+                    <li><a href="#">포토갤러리</a></li>
+                </ul>
+                <div>
+                    <h4>customer Center</h4>
+                    <h3>070-000-0000</h3>
+                    <p>am 09:00~ pm 06:00
+                        <br>농협 000-000-0000
+                        <br>홍길동
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div id="main_div">
+            <h1>공지사항</h1>
+            <p></p>
+            <p>사계절 낭만이 있는 곳에서 행복한 추억을 많이 만들어 가세요</p>
+            <div id="table_div">
+                <table id="main_table">
+                    <thead class="table_head">
+                        <tr>
+                            <th>번호</th>
+                            <th>제목</th>
+                            <th>작성일자</th>
+                            <th>조회수</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tabel_body">
+                        <tr>
+                            <td>4</td>
+                            <td>웹표준으로 제작되어 스마트폰에서도 이상없이 작동합니다.</td>
+                            <td>2024-06-20</td>
+                            <td>43</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>타업종에서도 이용이 가능하며, 그 경우 사전에 문의주시면 감사하겠습니다...</td>
+                            <td>2024-06-20</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>펜션, 게스트하우스, 민박등의 업종에 적합한 디자인입니다.</td>
+                            <td>2024-06-20</td>
+                            <td>11</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>test</td>
+                            <td>2024-06-20</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

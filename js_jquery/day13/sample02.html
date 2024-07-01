@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-family: 'd2coding';
+            white-space: pre;
+            /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        }
+    </style>
+    <script>
+        function log(...texts) {
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="log"></div>
+    <script>
+        //while문 연습
+        let num = 1;
+        let sum = 0;
+        while (num <= 10) {
+            sum += num;
+            num++;
+        }
+        log(sum);
+
+        //은행 복리 계산하기
+        let money = 100;
+        let m = 1;
+        while (m <= 12) {
+            log(money);
+            money *= 1.01;
+            m++;
+        }
+        log(money);
+
+        for (let i = 2; i <= 10; i += 2) {
+            log(i);
+        }
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 2 == 1) {
+                continue
+            }
+            log(i);
+        }
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 == 0) {
+                continue
+            }
+            log(i);
+        }
+
+        for (let i = 1; i <= 10; i++) {
+            if (i % 3 != 0) //!= not
+                log(i);
+        }
+
+        //구구단 시작
+        // for(let dan =2; dan<=9; dan++){ 
+        //     //dan=2 dan이 9랑 같거나 작을때 dan 1씩 증가
+        //     for(let n=2; n<=9; n++){
+        //         //n=2 n이 9랑 같거나 작을때 n 1씩 증가
+        //         log(dan, "*",n,"=",dan*n);
+        //     }
+        // }
+
+        // let dan=2;
+        // for(let n =2; n<=9 && dan <=9; n++){
+        //     log(dan,"*",n,"=", dan*n);
+        //     if(n>=9){
+        //         dan++;
+        //         n=2;
+        //     }
+        // }
+
+        //구구단
+        for (let loop = 1; loop < 81; loop++) {
+            //loop는 1 loop는 80까지 돌아감 
+            let dan = parseInt(loop / 9) + 1;
+            //dan= 소수점제외 정수 loop 1/9= 0+1 =1
+            let num = loop % 9 + 1;
+            //num= loop(아까 1나옴) 1%(나머지)9= 1은 나눌수없으니 1 +1 =2
+            log(dan, "*", num, "=", dan * num);
+            // dan 1 x num2 = 1x2=2 
+        }
+        //이해하기 어렵워
+    </script>
+
+</body>
+
+</html>

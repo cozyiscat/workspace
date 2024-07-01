@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            font-family: 'd2coding';
+            white-space: pre;
+            /* 연속된 공백과 줄바꿈을 그대로 표시 */
+        }
+    </style>
+    <script>
+        function log(...texts) {
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="log"></div>
+    <script>
+        //제어문이란 = 조건문, 선택문, 반복문, 기타문
+
+        //조건문 = 조건에 따라 실행문을 선택
+        // if / if else / if else if
+
+        // let num = prompt('숫자를 입력하세요.'); //prompt는 입력 팝업창
+        // if( num <10){ //< 참일 때
+        //     log('num은 10보다 작다')
+        // }
+        // else{log('아니다')}
+        
+
+        //선택문 = 선택된 값에 따라 실행문이 결정
+        // switch
+
+        // let classR = prompt('입력하세요');
+        // switch(classR){
+        //     case '1':{log('1을 누르셨습니다.');} break;
+        //     case '2':{log('2를 누르셨습니다.');} break;
+        //     case '3':{log('3을 누르셨습니다.');} break;
+        //     default :{log('다른걸 누르셨습니다');}
+        // } //break를 입력하면 나머지 건너뛰고 중괄호 탈출
+
+        
+        //반복문 = 지정된 조건에따라 실행문을 반복적으로 실행
+        // for / while /do while
+        
+        // let hap = 0;
+        // for(let i = 1 ; i <= 1301; i++){
+        //     hap += i;
+        // }
+        // log(hap); //1~1301 까지 더한 값 구하는법
+
+        // for(let i=1 ; i <= 100; i++){
+        //     var hap = 0;
+        //     hap += i;
+        // } //hap이 for문 안에 있기때문에 계속 반복, 결과는 100나옴
+        // log('1에서 100까지 더한 값은 : '+hap+'입니다.');
+
+        //기타문 = 반복을 건너뛰거나 실행을 멈춤
+        // break / continue
+    </script>
+</body>
+
+</html>

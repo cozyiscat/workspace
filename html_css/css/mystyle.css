@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.container {margin: 0 auto; width: 960px;}
+.row {overflow: hidden;}
+.span {float: left; margin: 5px;}
+.span-1 {width: 80px; background: aqua;}
+.span-2 {width: 160px; background-color: blueviolet;}
+.span-3 {width: 240px; background-color: olive;}
+.span-4 {width: 320px; background-color: orange;}
+.span-5 {width: 400px; background-color: yellow;}
+.span-6 {width: 480px; background-color: darkgrey;}
+.span-7 {width: 560px; background-color: fuchsia;}
+.span-8 {width: 640px; background-color: palegreen;}
+.span-9 {width: 720px; background-color: paleturquoise;}
+.span-10 {width: 800px; background-color: tomato;}
+.span-11 {width: 880px; background-color: violet;}
+.span-12 {width: 960px; background-color: royalblue;}

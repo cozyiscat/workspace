@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        body {font-family: Arial, Helvetica, sans-serif;
+        background: #999;
+    }
+        li {list-style: none;}
+        a {text-decoration: none;}
+        img {border: 0;}
+    </style>
+
+    <style>
+        div.top_bar {
+            margin: 0 auto;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            background: #32343e;
+        }
+        div.top_bar > div.logo {
+            padding-top: 4px;
+            text-align: center;
+            }
+    </style>
+
+    <style>
+        #main_section {
+            margin: 0 auto;
+            position: relative;
+            width: 1100px;
+            height: 550px;
+            padding: 50px;
+            /* overflow: hidden; */
+            background: white;
+            /* margin-top: 50px; */
+
+        }
+        #section1 {
+            width: 70%;
+            text-align: center;
+            float: left;
+            /* position: absolute; */
+            /* padding: 50px;             */
+        }
+       /* #section1 > div.map_text {
+
+        } */
+        #section1 > div.map_text> h1 {
+            margin-bottom: 10px;
+        }
+        #section1 > div.map_text >p {
+            margin: 20px 0;
+        }
+        #section1 > div.map_text >div.line {
+            margin-bottom: 30px;
+            border: 1px solid gray;
+            width: 35px;
+            position: absolute;
+            left: 415px;
+        }
+        
+        #section2 {
+            width: 28%;
+            /* text-align: center; */
+            float: left;
+            padding-top: 20px;
+            line-height: 30px;
+        }
+        #section2 > div.list {
+            margin-top: 10px;
+            /* border: 1px solid gray; */
+            padding: 10px;
+            position: relative;
+        }
+        #section2 >div.list> h3 {
+            color: green;
+            border-bottom: 1px solid darkgray;
+        }
+        #section2 >div.list> p> a {
+            position: absolute;
+            font-size: 12px;
+            right: 8px; top: 14px;
+            color: darkgray;
+        }
+        #section2 >div.list> ul {
+            margin-top: 5px;
+            position: relative;
+        }
+        #section2 >div.list> ul >li {
+            width: 180px;
+            height: 70px;
+        }
+    </style>
+
+    <style>
+        .img {float: left; margin-top: 10px;}
+       .des {float: left; margin-left: 10px; margin-top: px;}
+    </style>
+</head>
+<body>
+    <header id="main_header">
+        <div class="top_bar">
+            <div class="logo"><img src="Images/fhrh.png" alt=""></div>
+        </div>
+    </header>
+
+    <section id="main_section">
+        <div id="section1">
+            <div class="map_text">
+                <h1>Contect Us</h1>
+                <div class="line"></div>
+                <p>주소</p>
+            </div>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3174.153800074718!2d127.00769008861627!3d37.2914885679544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x357b5ccaffffffff%3A0x29ace24c91cee862!2z64yA7ZWc66-86rWtIOqyveq4sOuPhCDsiJjsm5Dsi5wg7J6l7JWI6rWsIOygleyhsOuhnCA5NDAg7JiB7ZmU64-ZIOygleyhsOuhnCA5NDAtMSDsnqXslYjqtawg7IiY7JuQ7IucIOqyveq4sOuPhCBLUiAxNjI2OSDsl7DshLhJVOuvuOuemOq1kOycoeybkCDsnqXslYjrrLjsuqDtjbzsiqQ!3m2!1d37.2914844!2d127.01256099999999!5e0!3m2!1sko!2sus!4v1718861797640!5m2!1sko!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    <div id="section2">
+        <div class="list">
+            <h3>특별함</h3>
+            <div class="list_1"></div>
+            <p><a href="#">더보기 +</a></p>
+            <ul>
+                <li><a href="#">
+                    <div class="img">
+                        <img src="http://placehold.it/45x35" alt="">
+                    </div>
+                    <div class="des">
+                        <b>HOT news 1</b>
+                        <p>2024-06-20</p>
+                    </div>    
+                </a></li>
+                <li><a href="#">
+                    <div class="img">
+                        <img src="http://placehold.it/45x35" alt="">
+                    </div>
+                    <div class="des">
+                        <b>HOT news 1</b>
+                        <p>2024-06-20</p>
+                    </div>    
+                </a></li>
+                <li><a href="#">
+                    <div class="img">
+                        <img src="http://placehold.it/45x35" alt="">
+                    </div>
+                    <div class="des">
+                        <b>HOT news 1</b>
+                        <p>2024-06-20</p>
+                    </div>    
+                </a></li>
+            </ul>
+        </div>
+        <div class="list">
+            <h3>인근여행지</h3>
+            <div class="list_1"></div>
+            <p><a href="#">더보기 +</a></p>
+            <ul>
+                <li><a href="#">
+                    <div class="img">
+                        <img src="http://placehold.it/45x35" alt="">
+                    </div>
+                    <div class="des">
+                        <b>HOT news 1</b>
+                        <p>2024-06-20</p>
+                    </div>    
+                </a></li>
+                <li><a href="#">
+                    <div class="img">
+                        <img src="http://placehold.it/45x35" alt="">
+                    </div>
+                    <div class="des">
+                        <b>HOT news 1</b>
+                        <p>2024-06-20</p>
+                    </div>    
+                </a></li>
+                <li><a href="#">
+                    <div class="img">
+                        <img src="http://placehold.it/45x35" alt="">
+                    </div>
+                    <div class="des">
+                        <b>HOT news 1</b>
+                        <p>2024-06-20</p>
+                    </div>    
+                </a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+</body>
+</html>

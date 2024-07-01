@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문 실습</title>
+    <script>
+        function log(...texts){
+            const logDiv = document.getElementById('log');
+            const newLogEntry = document.createElement('div');
+            // 여러 텍스트 인자를 하나의 문자열로 합칩니다.
+            newLogEntry.textContent = texts.join(' ');
+            logDiv.appendChild(newLogEntry);
+        }
+    </script>
+</head>
+<body>
+    <div id="log"></div>
+<script>
+    // var num = 5;
+    // if(num < 10){
+    //     log('num은 10보다 작아요')
+    // }
+    // var num = prompt('숫자를 입력하세요');
+    
+    // if(num<10){
+    //     log('num은 10보다 작아요')
+    // }
+    
+    // let num01 = 5;
+    // let num02 = 1;
+    // let num03 = 10;
+    // let min;
+    // if(num01 < num02){
+    //     min=num01;
+    // }else {min=num02;}
+    // log(min)
+    // if(min>num03){
+    //     min=num03;
+    // }
+    // log(min)
+
+    // //변수 선언하기
+    // var age =prompt('나이를 입력하세요');
+
+    // if(age >= 20 && age <= 40){
+    //     log('입장을 환영합니다');
+    // }else{
+    //     log('입장이 허락되지 않았습니다');
+    // }
+
+    let score = 95;
+    switch(parseInt (score/10)){
+        case 10:
+        case 9: log("A학점");break;
+        case 8: log("B학점");break;
+        case 7: log("C학점");break;
+        case 6: log("D학점");break;
+        default: log("F학점");break;
+    }
+
+    var classRoom = prompt('학년을 입력하세요','1학년:1, 2학년:2, 3학년:3, 기타:4');
+
+    switch (classRoom){
+        case '1':{log('2층으로 가세요');};break;
+        case '2':{log('3층으로 가세요');};break;
+        case '3':{log('별관으로 가세요');};break;
+        case '3':{log('1층 안내실로 가세요');};break;
+        default :{log('1학년:2층 2학년:3층 3학년:별관 기타:1층안내실');}
+    }
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theater Practice</title>
+
+    <!-- 초기 설정 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        #header {
+            height: 100px;
+            width: 500px;
+            margin: 10px auto;
+            margin-bottom: 40px;
+            line-height: 90px;
+            border: 1px solid;
+            text-align: center;
+        }
+
+        #content {
+            margin: 0 auto;
+            width: 460px;
+            overflow: hidden;
+        }
+
+        #content ul li {
+            width: 60px;
+            height: 60px;
+            border: 1px solid black;
+            float: left;
+            border-radius: 20px 20px 0 0;
+            text-align: center;
+            line-height: 60px;
+            margin: 10px;
+            /* margin-bottom: 30px; */
+        }
+        #content ul li:hover {background-color: black; color: white;} 
+
+        /* ul:nth-child(1) {margin-bottom: 30px;} */
+        /* #content ul:nth-child(1) {margin-bottom: 30px;} */
+        /* #a-line {margin-top: 0px;} */
+        #a-line li:nth-child(3) {margin-left: 30px; margin-right: 30px;}
+        /* #a-line li:nth-child(4) {margin-left: 30px;} */
+
+        /* #b-line {margin-bottom: 30px;} */
+        #b-line li:nth-child(3) {margin-left: 30px;}
+        #b-line li:nth-child(4) {margin-left: 30px;}
+
+        #c-line {
+            line-height: 300px;
+            margin-top: 30px;}
+        #c-line li:nth-child(3) {margin-left: 30px;}
+        #c-line li:nth-child(4) {margin-left: 30px;}
+
+        #content ul:nth-child(3) li {margin-top: 30px; margin-bottom: 30px}
+        #d-line li:nth-child(3) {margin-left: 30px;}
+        #d-line li:nth-child(4) {margin-left: 30px;}
+
+        /* #e-line {margin-bottom: 30px;} */
+        #e-line li:nth-child(3) {margin-left: 30px;}
+        #e-line li:nth-child(4) {margin-left: 30px;}
+
+        /* #a-line {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto;
+        } */
+
+        /* #a-line > li {
+            border: 1px solid;
+            float: left;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="header">
+            <div id="screen">
+                <h1>Screen</h1>
+            </div>
+        </div>
+
+        <div id="content">
+            <ul id="a-line">
+                <li>A1</li>
+                <li>A2</li>
+                <li>A3</li>
+                <li>A4</li>
+                <li>A5</li>
+            </ul>
+
+            <ul id="b-line">
+                <li>B1</li>
+                <li>B2</li>
+                <li>B3</li>
+                <li>B4</li>
+                <li>B5</li>
+            </ul>
+
+            <ul id="c-line">
+                <li>C1</li>
+                <li>C2</li>
+                <li>C3</li>
+                <li>C4</li>
+                <li>C5</li>
+            </ul>
+
+            <ul id="d-line">
+                <li>D1</li>
+                <li>D2</li>
+                <li>D3</li>
+                <li>D4</li>
+                <li>D5</li>
+            </ul>
+
+            <ul id="e-line">
+                <li>E1</li>
+                <li>E2</li>
+                <li>E3</li>
+                <li>E4</li>
+                <li>E5</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

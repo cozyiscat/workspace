@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>텍스트가 영역을 벗어날 때 white-space word-wrap</title>
+    <style>
+        * {margin:0;}
+        body {font-size:15px;color:#555;line-height:160%;background:#f9f9f5;}
+        #wrap {margin:50px auto;width:1000px;}
+        #wrap #textBox {background:#fff;}
+        #wrap #textBox .gap {padding:50px;}
+        #wrap #textBox .gap h3{font-weight:normal;font-size:20px;text-align:center;color:#99c;}
+        #wrap #textBox .gap p{width:100%;line-height:160%;margin-bottom:10px;padding:0 10px;}
+        #wrap #textBox .gap p.text-wrap1 {text-transform: uppercase;}
+        #wrap #textBox .gap p.text-wrap2 {text-transform: lowercase;}
+        #wrap #textBox .gap p.text-wrap3 {text-transform: capitalize;}
+    </style>
+</head>
+<body>
+<div id="wrap">
+    <div id="textBox">
+        <div class="gap">
+            <div id="text-wrap">
+                <h3>영문 대문자</h3>
+                <p class="text-wrap1">
+                    LoremIpsumDolorSitAmet,ConsecteturAdipiscingElit,SedDoEiusmodTemporIncididuntUtLaborEtDoloreMagnaAliqua.UtEnimAdMinimVeniam,QuisNostrudExercitationUllamcoLaborisNisiUtAliquipExEaCommodoConsequat.
+                </p>
+                <h3>영문 소문자</h3>
+                <p class="text-wrap2">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus nisi voluptatem, illo eos a sequi fugiat! Culpa commodi sequi beatae dolores, rerum asperiores maiores ipsa laudantium deserunt eos quod laboriosam?
+                </p>
+                <h3>영문 단어 첫글자 대문자</h3>
+                <p class="text-wrap3">
+                    Lorem Ipsum Dolor Sit Amet, Consectetur Adipisci
+                    ng Elit, Sed Do Eiusmod Tempor Incididunt Ut Lab
+                    ore Et Dolore Magna Aliqua. Ut Enim Ad Minim Ven
+                    iam,Quis Nostrud Exercitation Ullamco Laboris Ni
+                    si Ut Aliquip Ex Ea Commodo Consequat.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

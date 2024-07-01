@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width:100px;
+            margin: 0 15px;
+            font : bold 25px/50px arial;
+            background-color: red;
+            color : white;
+            border: none;
+            text-align: center;
+        }
+        #box {
+            position: absolute;
+            left: 400px;
+            top: 400px;
+            width: 50px;
+            height: 50px;
+            z-index: 1;
+            background-color: blue;
+        }
+        #topBtn {
+            position: absolute;
+            top: 10px;
+            left: 400px;
+        }
+        #leftBtn{
+            position: absolute;
+            top: 70px;
+            left: 290px;
+        }
+        #rightBtn{
+            position: absolute;
+            top: 70px;
+            left: 510px;
+        }
+        #bottomBtn{
+            position: absolute;
+            top: 130px;
+            left: 400px;
+        }
+        #stop{
+            position: absolute;
+            top: 70px;
+            left: 400px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" id="topBtn">▲</button>
+    <button type="button" id="leftBtn">←</button>
+    <button type="button" id="rightBtn">→</button>
+    <button type="button" id="bottomBtn">▼</button>
+    <button type="button" id="stop">Stop</button>
+    <div id="box"></div>
+    <script>
+        const btnTop = document.querySelector('#topBtn');
+        const btnLeft = document.querySelector('#leftBtn');
+        const btnRight = document.querySelector('#rightBtn');
+        const btnBottom = document.querySelector('#bottomBtn');
+        const btnStop = document.querySelector('#stop');
+        let boxEle = document.querySelector('#box');
+
+        let boxTop = 400;
+        let boxLeft = 400;
+
+        function moveUp(){
+            boxTop -= 1;
+            boxEle.style.top = boxTop+"px";
+        }
+        function moveLeft(){
+            boxLeft -= 1;
+            boxEle.style.left = boxLeft+"px";
+        }
+        function moveRight(){
+            boxLeft += 1;
+            boxEle.style.left = boxLeft+"px";
+        }
+        function moveDown(){
+            boxTop += 1;
+            boxEle.style.top = boxTop+"px";
+        }
+
+        let mvTimer;
+        function play1(){
+            if(mvTimer==null){
+                mvTimer = setInterval(moveUp,10);
+            }
+        }
+        function play2(){
+                if(mvTimer==null){
+                mvTimer = setInterval(moveLeft,10);
+            }
+        }
+        function play3(){
+            if(mvTimer==null){
+            mvTimer = setInterval(moveRight,10);
+        }
+    }
+        function play4(){
+            if(mvTimer==null){
+        mvTimer = setInterval(moveDown,10);
+        }
+    }
+        function stop(){
+            clearInterval(mvTimer);
+            mvTimer = null;
+        }
+        btnTop.addEventListener("click",play1);
+        btnLeft.addEventListener("click",play2);
+        btnRight.addEventListener("click",play3);
+        btnBottom.addEventListener("click",play4);
+        btnStop.addEventListener("click",stop);
+    </script>
+</body>
+</html>

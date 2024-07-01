@@ -30,19 +30,22 @@
         //01.
         ///삽입할 요소 찾기
         const mainEle = document.getElementById("content");
+        //div 요소 노드 만들기
         const divEle = document.createElement("div");
-        divEle.classList.add("container");
+        divEle.classList.add("container");//클래스 이름 추가하기
 
+        //p 요소 노드 만들기
         const pEle = document.createElement("p");
-        pEle.textContent = "새문장 입니다.";
+        pEle.textContent = "새문장 입니다."; //p요소노드에 text노드 추가하기
 
+        //a 요소 노드 만들기
         const aEle = document.createElement("a");
-        aEle.setAttribute("href","http://www.naver.com")
-        aEle.textContent="네이버로 이동";
+        aEle.setAttribute("href","http://www.naver.com") //href속성 추가하기
+        aEle.textContent="네이버로 이동"; //text노드 추가
 
-        divEle.appendChild(pEle);
-        divEle.appendChild(aEle);
-        mainEle.appendChild(divEle);
+        divEle.appendChild(pEle); //컨테이너에 p요소 추가
+        divEle.appendChild(aEle); //컨테이너에 a요소 추가
+        mainEle.appendChild(divEle); //메인에 컨테이너를 추가
 
     </script>
     

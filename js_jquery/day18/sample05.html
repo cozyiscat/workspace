@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <div id="container">
+        <!-- <button id="btn">button</button> -->
+        <img id="img" src="run/run/1.png" alt="run">
+        <p class="test">1
+        </p>
+    </div>
+    <script>
+        $(function(){
+            // $('#btn').click(function(){
+                // let i = 1;
+                // setInterval(function(){
+                //         let localSrc = "run/run/";
+                //         if(i<15){
+                //             i++;
+                //         }
+                //         else {i=1;}
+                //         $('#img').attr('src',localSrc + i + '.png');
+                //         $('.test').text(i);
+                // },100);
+                let i = 1; // i를 초기화
+                setInterval(function() {
+                    let localSrc = "run/run/";
+                    $('#img').attr('src', localSrc + i + '.png');
+                    $('.test').text(i);
+                    i++;
+                    if (i > 15) {
+                        i = 1;
+                    }
+                }, 100);
+                //     setInterval(function(){
+                //         let localSrc = "run/run/";
+                //         if(i<=15){
+                //             $('#img').attr('src',localSrc + i + '.png');
+                //             $('.test').text(i);
+                //             i++;
+                //         }
+                //         else {i=1;
+                //             $('#img').attr('src','run/run/1.png');
+                //         }
+                // },500);
+            // });
+        });
+    </script>
+    
+</body>
+</html>

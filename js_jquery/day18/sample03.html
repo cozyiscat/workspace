@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <button id="btn01">button</button>
+    <div id="container">
+        <p>안녕하셨어요</p>
+    </div>
+    <button id="btn02">button</button>
+    <div id="container2">
+        <p>안녕하셨어요</p>
+    </div>
+    <section>
+        <p class="btn">
+            <button id="btn03">이미지 가져오기</button>
+        </p>
+        <p class="box01">
+            <img src="images/pic1.jpg" alt="sample">
+            <img src="images/pic2.jpg" alt="sample">
+            <img src="images/pic3.jpg" alt="sample">
+            <img src="images/pic4.jpg" alt="sample">
+        </p>
+    </section>
+    <script>
+        $(function(){
+            $('#btn01').click(function(){
+                $('#container').append('<p>반갑습니다.</p>');
+            });
+            $('#btn02').click(function(){
+                $('#container2').prepend('<p>오랜만입니다.</p>');
+            });
+            $('#btn03').click(function(){
+                $('img:first-child').appendTo('.box01');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <button id="btn01">button</button>
+    <div id="container">
+        <ul class="nav1">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <ul class="nav2">
+            <li>0</li>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <button id="btn02">button</button>
+    <ul class="box05">
+        <li id="first" title="a1a">This is paragraph</li>
+        <li class="second" title="bb">This is paragraph</li>
+        <li id="third" title="cerc">This is paragraph</li>
+        <li class="foyrth" title="ded">This is paragraph</li>
+    </ul>
+
+    <script>
+        $(function(){
+            $("#btn01").click(function(){
+                $(".nav1 li:lt(3)").css({"background-color":"#9ab92e","border":"1px solid #05184d"})
+                $(".nav2 li:lt(3)").css({"background-color":"#9ab92e","border":"1px solid #05184d"})
+            });
+        });
+
+        $(function(){
+            $("#btn02").click(function(){
+                $('li[id^="f"][id*="s"]')
+                .css({"background-color":"#00c8c3","border":"1px solid #05184d"})
+                $(".box05 li:not(:ntn-child(2))").css({"background-color":"#00c8c3","border":"1px solid #05184d"})
+            });
+        });
+       
+
+    </script>
+    
+</body>
+</html>

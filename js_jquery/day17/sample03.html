@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>기본선택자</title>
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+<p><button  id="btn">버튼</button></p>
+<ul id="list1">
+    <li class="a">list1 item a</li>
+    <li class="b">list1 item a</li>
+    <li class="c">list1 item b</li>
+    <li class="d">list1 item b</li>
+</ul>
+<p class="num">class a</p>
+<q>normal 01</q>
+<p class="b">class b</p>
+<p>normal 02</p>
+<em id="first">변경전</em>
+<p id="second">아무것도 없습니다.</p>
+<p class="olde"><strong>변경되었습니다.</strong></p>
+<script>
+    $(function(){
+        //일반 자바스크립트 : 객체.style.속성=값
+        //$("css 선택자")
+        $("#btn").click(function(){
+            $(".a").css('color','red');
+            $("#list1").css({
+                'background-color' : 'yellow',
+                'list-style':'none'
+            });
+            $("#first").text("변경후");
+            $("p.num+q").css('background-color','green'); //+ = 바로 뒤에오는형제요소 선택
+            $("p.num~p").css('background-color','red'); // ~ = 뒤에있는 모든 이웃요소 선택
+            $("#list1 .b").css('color','orange');
+            $("#list1 .d").css('color','#887751');
+        });
+    });
+</script>
+</body>
+</html>

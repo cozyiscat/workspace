@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <button id="btn01">button</button>
+    <div id="container">
+        <nav>
+            <ul class="list">
+                <li id="first">One</li>
+                <li>Two</li>
+                <li>Three</li>
+                <li></li>
+            </ul>
+        </nav>
+    </div>
+
+    <script>
+        $(function(){
+            $("#btn01").click(function(){
+                // $("#first").css({'background-color':'#9ab92e','color':'#05184D'});
+                $("ul>li:not(:nth-child(2))").css({'background-color':'#9ab92e','border':'1px dashed #05184D'});
+                $("li:empty").text("orange");
+            });
+        });
+    </script>
+</body>
+</html>

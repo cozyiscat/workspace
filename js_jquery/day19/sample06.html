@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        dt {
+            width: 70px;
+            height: 30px;
+            border: 1px dashed orange;
+            line-height: 30px;
+            background-color: palegoldenrod;
+            cursor: pointer;
+        }
+        dd {
+            display: none;
+        }
+    </style>
+</head> 
+<body>
+    <dl>
+        <dt class="btn1">타이틀01</dt>
+        <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quia officiis alias odit cum voluptate consequatur, commodi eveniet autem possimus molestias nemo iste dolorum quo. Dignissimos saepe quisquam consequatur necessitatibus.</dd>
+        <dt class="btn2">타이틀02</dt>
+        <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quia officiis alias odit cum voluptate consequatur, commodi eveniet autem possimus molestias nemo iste dolorum quo. Dignissimos saepe quisquam consequatur necessitatibus.</dd>
+        <dt class="btn3">타이틀03</dt>
+        <dd>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quia officiis alias odit cum voluptate consequatur, commodi eveniet autem possimus molestias nemo iste dolorum quo. Dignissimos saepe quisquam consequatur necessitatibus.</dd>
+    </dl>
+    <!-- <script>
+        $(function(){
+            $('.btn1').on('click',function(){
+                $('dd:not(:eq(0))').slideUp(1000);
+            });
+            $('.btn2').on('click',function(){
+                $('dd:not(:eq(1))').slideUp(1000);
+            });
+            $('.btn3').on('click',function(){
+                $('dd:not(:eq(2))').slideUp(1000);
+            });
+        });
+    </script> -->
+    <script>
+        $(function(){
+            $('dl>dt').on('click',function(){
+                let displaySrc = $(this).next('dd').css('display');
+                if(displaySrc == 'none'){
+                    $('dl>dd').slideUp(300);
+                    $(this).next('dd').slideDown(300);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

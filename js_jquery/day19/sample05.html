@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: aqua;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Start Animation</button>
+    <div id="box"></div>
+    <script>
+        $(function(){
+            $('#btn').on('click',function(){
+                $('#box').animate({width:"400px"},300);
+                $('#box').animate({height:"300px"},400);
+                $('#box').animate({marginLeft:"200px"},500);
+                $('#box').animate({marginTop:"100px", borderWidth: "10"},'slow');
+            });
+        });
+    </script>
+</body>
+</html>

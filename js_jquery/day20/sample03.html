@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.min.js"></script>
+    <style>
+        span {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p>이름(한글):
+        <input type="text" class="korean-input">
+        <span>
+            한글로 입력하세요
+        </span>
+    </p>
+    <p>이름(영문):
+        <input type="text" class="english-input">
+        <span>
+            영어로 입력하세요
+        </span>
+    </p>
+
+    <script>
+    $(function(){
+        $(':input').on('focus',function(){ //입력상자가 포커스 되었을 때.
+            $(this).next('span') //입력상자 다음에오는 것 중 'span'요소 선택하기
+            .css('display','inline') //디스플레이 none일 때 스타일속성으로 보이기
+            .delay(800) //0.8초 동안 대기
+            .fadeOut(1000); //1초동안 서서히 사라짐
+        });
+    });
+    </script>
+    <script>
+        $(function(){
+            // 한글 입력 필드 이벤트 처리
+            $('.korean-input').on('input', function() {
+                var inputValue = $(this).val();
+                if (!/^[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]+$/.test(inputValue)) { // 한글 입력이 아닌 경우
+                    $(this).next('span').fadeIn().delay(800).fadeOut(1000);
+                    $(this).val(''); // 입력값 초기화
+                }
+            });
+    
+            // 영어 입력 필드 이벤트 처리
+            $('.english-input').on('input', function() {
+                var inputValue = $(this).val();
+                if (!/^[a-zA-Z]*$/.test(inputValue)) { // 영어 입력이 아닌 경우
+                    $(this).next('span').fadeIn().delay(800).fadeOut(1000);
+                    $(this).val(''); // 입력값 초기화
+                }
+            });
+        });
+    </script>
+</body>
+</html>

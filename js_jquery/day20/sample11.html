@@ -41,7 +41,7 @@
             $('nav>ul>li>a').on('click',function(){
                 let aName = $(this).attr('href');
                 let sTop= $(aName).offset().top;
-                $('html','body').animate({scrollTop: sTop -60}, 500,'swing');
+                $('html,body').animate({scrollTop: sTop -60}, 500,'swing');
                 return false;
             });
         });
